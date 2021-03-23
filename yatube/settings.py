@@ -51,7 +51,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'yatube.urls'
 
-TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -63,7 +63,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'yatube.context_processors.year',
             ],
         },
     },
@@ -116,15 +115,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Login
 
-LOGIN_URL = "/auth/login/"
-LOGIN_REDIRECT_URL = "index"
+LOGIN_URL = '/auth/login/'
+LOGIN_REDIRECT_URL = 'index'
 # LOGOUT_REDIRECT_URL = "index"
 
 #  подключаем движок filebased.EmailBackend
-EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 # указываем директорию, в которую будут складываться файлы писем
-EMAIL_FILE_PATH = os.path.join(BASE_DIR, "sent_emails")
+EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
